@@ -62,10 +62,8 @@ class ProblemsController < ApplicationController
   end
 
   def create_issue
-    issue = Issue.new(problem: problem, user: current_user)
-    issue.body = render_to_string(*issue.render_body_args)
-
-    flash[:error] = issue.errors.full_messages.join(', ') unless issue.save
+    issue = IssueService.create_issue(self, problem, current_user)
+    flash[:error] = issue.errors.full_messages.join(', ') unless issue.valid?
 
     redirect_to app_problem_path(app, problem)
   end

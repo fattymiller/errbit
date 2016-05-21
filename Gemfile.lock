@@ -1,3 +1,32 @@
+GIT
+  remote: git://github.com/fattymiller/errbit_errorception_engine.git
+  revision: 81cffe9ba2fb9497f00a408a586dc85d7d9a8f0a
+  specs:
+    errbit_errorception_engine (0.0.1)
+      rails (~> 4.2.5.2)
+
+GIT
+  remote: git://github.com/fattymiller/errbit_jira_engine.git
+  revision: 72ae088951f023e35939289b1945e454b7925d3f
+  branch: update-to-use-and-sustain-oauth
+  specs:
+    errbit_jira_engine (0.0.1)
+      errbit_plugin
+      jira-ruby
+      omniauth-jira
+      rails (~> 4.2.0)
+
+GIT
+  remote: git://github.com/fattymiller/omniauth-jira.git
+  revision: 0c3d7eb994d464fa1474de5146f9dab34f7f7a60
+  branch: expose-jira-authorisation-keys
+  specs:
+    omniauth-jira (0.2.0)
+      multi_json (~> 1.3)
+      oauth
+      omniauth (~> 1.0)
+      omniauth-oauth (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -89,8 +118,8 @@ GEM
     coderay (1.1.0)
     colorize (0.7.7)
     columnize (0.9.0)
-    concurrent-ruby (1.0.1)
-    concurrent-ruby (1.0.1-java)
+    concurrent-ruby (1.0.2)
+    concurrent-ruby (1.0.2-java)
     coveralls (0.8.2)
       json (~> 1.8)
       rest-client (>= 1.6.8, < 2)
@@ -143,7 +172,7 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.7)
       tilt
-    hashie (3.4.2)
+    hashie (3.4.4)
     hipchat (1.5.1)
       httparty
       mimemagic
@@ -160,6 +189,9 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
+    jira-ruby (0.1.18)
+      activesupport
+      oauth (~> 0.4.7)
     jquery-rails (2.1.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -177,8 +209,8 @@ GEM
     libv8 (3.16.14.13)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
-    mail (2.6.3)
-      mime-types (>= 1.16, < 3)
+    mail (2.6.4)
+      mime-types (>= 1.16, < 4)
     meta_request (0.3.4)
       callsite (~> 0.0, >= 0.0.11)
       rack-contrib (~> 1.1)
@@ -187,7 +219,7 @@ GEM
     mime-types (2.99.1)
     mimemagic (0.3.0)
     mini_portile2 (2.0.0)
-    minitest (5.8.4)
+    minitest (5.9.0)
     mongo (2.2.1)
       bson (~> 4.0)
     mongoid (5.0.2)
@@ -204,7 +236,7 @@ GEM
       bundler (>= 1.0.0)
       rails (>= 3.2.0)
       railties (>= 3.2.0)
-    multi_json (1.11.2)
+    multi_json (1.12.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     net-scp (1.2.1)
@@ -214,6 +246,7 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     nokogiri (1.6.7.2-java)
+    oauth (0.4.7)
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
@@ -222,9 +255,9 @@ GEM
       rack (~> 1.2)
     octokit (4.3.0)
       sawyer (~> 0.7.0, >= 0.5.3)
-    omniauth (1.2.2)
+    omniauth (1.3.1)
       hashie (>= 1.2, < 4)
-      rack (~> 1.0)
+      rack (>= 1.0, < 3)
     omniauth-github (1.1.2)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.1)
@@ -233,6 +266,9 @@ GEM
       multi_json (~> 1.3)
       omniauth (>= 1.1.1)
       omniauth-oauth2 (>= 1.3.1)
+    omniauth-oauth (1.1.0)
+      oauth
+      omniauth (~> 1.0)
     omniauth-oauth2 (1.3.1)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
@@ -310,7 +346,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
-    rake (10.5.0)
+    rake (11.1.2)
     ref (1.0.5)
     request_store (1.1.0)
     responders (2.1.1)
@@ -376,10 +412,10 @@ GEM
     slop (3.6.0)
     spoon (0.0.4)
       ffi
-    sprockets (3.5.2)
+    sprockets (3.6.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.0.3)
+    sprockets-rails (3.0.4)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
@@ -445,7 +481,9 @@ DEPENDENCIES
   dotenv-rails
   draper
   email_spec
+  errbit_errorception_engine!
   errbit_github_plugin
+  errbit_jira_engine!
   errbit_plugin
   fabrication
   flowdock
@@ -466,6 +504,7 @@ DEPENDENCIES
   mongoid_rails_migrations
   omniauth-github
   omniauth-google-oauth2
+  omniauth-jira!
   pjax_rails
   poltergeist
   pry-byebug
@@ -494,4 +533,4 @@ DEPENDENCIES
   yajl-ruby
 
 BUNDLED WITH
-   1.11.2
+   1.12.4

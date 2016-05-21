@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   # Hoptoad Notifier Routes
   match '/notifier_api/v2/notices' => 'notices#create', via: [:get, :post]
   get '/locate/:id' => 'notices#locate', :as => :locate
+  
+  mount ErrbitJiraEngine::Engine => '/'
+  mount ErrbitErrorceptionEngine::Engine => '/'
 
   resources :notices, only: [:show]
   resources :users do

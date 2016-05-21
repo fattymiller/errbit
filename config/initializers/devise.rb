@@ -257,7 +257,14 @@ Devise.setup do |config|
       Errbit::Config.google_client_id,
       Errbit::Config.google_secret
   end
+  
+  if Errbit::Config.jira_authentication || Rails.env.test?
+    Devise.omniauth :jira,
+      *ErrbitJiraEngine.consumer_credentials.values,
+      client_options: ErrbitJiraEngine.client_settings
+  end
 
+  
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

@@ -44,6 +44,13 @@ Errbit::Config = Configurator.run(
   google_site_title:         ['GOOGLE_SITE_TITLE'],
   google_client_id:          ['GOOGLE_CLIENT_ID'],
   google_secret:             ['GOOGLE_SECRET'],
+  # jira
+  jira_authentication:       ['JIRA_AUTHENTICATION'],
+  jira_site_title:           ['JIRA_SITE_TITLE'],
+  jira_consumer_key:         ['JIRA_CONSUMER_KEY'],
+  jira_application_url:      ['JIRA_APPLICATION_URL'],
+  jira_private_key:          ['JIRA_PRIVATE_KEY'],
+  jira_context_path:         ['JIRA_CONTEXT_PATH'],
 
   email_delivery_method:     ['EMAIL_DELIVERY_METHOD', lambda do |values|
     values[:email_delivery_method] && values[:email_delivery_method].to_sym

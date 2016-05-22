@@ -8,6 +8,7 @@
 - content_for :action_bar do
   = render 'shared/link_github_account'
   = render 'shared/link_google_account'
+  = render 'shared/link_jira_account'
   = link_to 'edit', edit_user_path(user), :class => 'button'
   = link_to 'destroy', user_path(user), :method => :delete,
     :data => { :confirm => t('users.confirm_delete') }, :class => 'delete button'
@@ -30,4 +31,3 @@
   %tr
     %th Created
     %td= user.created_at.to_s(:micro)
-

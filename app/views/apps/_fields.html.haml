@@ -19,6 +19,9 @@
   = f.label :bitbucket_repo
   = f.text_field :bitbucket_repo, :placeholder => "errbit/errbit from https://bitbucket.org/errbit/errbit"
 %div
+  = f.label :errorception_secret, 'Errorception Webhook Secret'
+  = f.text_field :errorception_secret, :placeholder => "From: https://errorception.com/projects/[PROJECT_ID]/settings/hooks/webhook"
+%div
   = f.label :asset_host
   %em Used to generate links for JavaScript errors
   = f.text_field :asset_host, :placeholder => "e.g. https://assets.example.com"

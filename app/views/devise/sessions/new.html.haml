@@ -4,9 +4,12 @@
 - if Errbit::Config.github_authentication || Errbit::Config.google_authentication || Errbit::Config.jira_authentication
   - content_for :action_bar do
     %div.action-bar
-      %span.github= link_to "Sign in with #{Errbit::Config.github_site_title}", user_omniauth_authorize_path(:github) if Errbit::Config.github_authentication
-      %span.google= link_to "Sign in with #{Errbit::Config.google_site_title}", user_omniauth_authorize_path(:google_oauth2) if Errbit::Config.google_authentication
-      %span.jira= link_to "Sign in with #{Errbit::Config.jira_site_title}", user_omniauth_authorize_path(:jira) if Errbit::Config.jira_authentication
+      - if Errbit::Config.github_authentication
+        %span.github= link_to "Sign in with #{Errbit::Config.github_site_title}", user_omniauth_authorize_path(:github) if Errbit::Config.github_authentication
+      - if Errbit::Config.google_authentication
+        %span.google= link_to "Sign in with #{Errbit::Config.google_site_title}", user_omniauth_authorize_path(:google_oauth2) if Errbit::Config.google_authentication
+      - if Errbit::Config.jira_authentication
+        %span.jira= link_to "Sign in with #{Errbit::Config.jira_site_title}", user_omniauth_authorize_path(:jira) if Errbit::Config.jira_authentication
 
 = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
   .required

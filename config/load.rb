@@ -51,6 +51,8 @@ Errbit::Config = Configurator.run(
   jira_application_url:      ['JIRA_APPLICATION_URL'],
   jira_private_key:          ['JIRA_PRIVATE_KEY'],
   jira_context_path:         ['JIRA_CONTEXT_PATH'],
+  # errorception
+  errorception_secret:       ['ERRORCEPTION_SECRET'],
 
   email_delivery_method:     ['EMAIL_DELIVERY_METHOD', lambda do |values|
     values[:email_delivery_method] && values[:email_delivery_method].to_sym

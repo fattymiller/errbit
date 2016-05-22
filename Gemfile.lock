@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/fattymiller/errbit_jira_engine.git
-  revision: 977f06458a2767d66adba9cc171546a03aa2c3c1
+  revision: 6a830553ee287062de1b940419541bd55a37e9f5
   branch: update-to-use-and-sustain-oauth
   specs:
     errbit_jira_engine (0.0.1)

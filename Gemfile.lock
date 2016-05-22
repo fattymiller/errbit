@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/fattymiller/errbit_errorception_engine.git
-  revision: 81879106146810469bf85a51ace939c1c5809096
+  revision: a29cb7a25dd40eba2cfcbe2bbb049d4aeea1a350
   specs:
     errbit_errorception_engine (0.0.1)
       rails (~> 4.2.5.2)

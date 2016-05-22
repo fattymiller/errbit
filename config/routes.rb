@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/locate/:id' => 'notices#locate', :as => :locate
   
   mount ErrbitJiraEngine::Engine => '/'
-  mount ErrbitErrorceptionEngine::Engine => '/'
+  mount ErrbitErrorceptionEngine::Engine => '/errorception'
 
   resources :notices, only: [:show]
   resources :users do

@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/fattymiller/errbit_jira_engine.git
-  revision: a5782c487579c9c42c1461aef975eb4622517a13
+  revision: 1a73b0bda957d492b5b68c0a3c64300c280b82f7
   specs:
     errbit_jira_engine (0.0.1)
       errbit_plugin

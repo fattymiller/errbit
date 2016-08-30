@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/fattymiller/errbit_errorception_engine.git
-  revision: 9b362e3e65f9323fa733c9e336f621ecdd1f95ad
+  revision: 0f820f13ebd5a8894c8c0b4eb76e885a75c6f092
   specs:
     errbit_errorception_engine (0.0.1)
       rails (~> 4.2.5.2)
@@ -531,5 +531,8 @@ DEPENDENCIES
   xmpp4r
   yajl-ruby
 
+RUBY VERSION
+   ruby 2.2.4p230
+
 BUNDLED WITH
-   1.12.4
+   1.12.5
